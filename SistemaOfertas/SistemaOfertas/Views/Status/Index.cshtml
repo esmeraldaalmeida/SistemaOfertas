@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SistemaOfertas.Models.Status>
+
+@{ ViewBag.Title = "Status"; }
+
+<h2>Status</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinalizaCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContabCliente)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.DescricaoStatus)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FinalizaCliente)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ContabCliente)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.StatusId }) |
+        @Html.ActionLink("Detalhes", "Details", new { id = item.StatusId }) |
+        @Html.ActionLink("Deletar", "Delete", new { id = item.StatusId })
+    </td>
+</tr>}
+
+</table>

@@ -1,0 +1,26 @@
+﻿@{ ViewBag.Title = "WeChip"; }
+
+<div class="jumbotron">
+    <h1>WeChip</h1>
+    <p> Seja bem vindo(a) a nossa Loja de Informática.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Clientes</h2>
+        <p>
+            Para ver mais informações sobre clientes clique no botão abaixo.
+        </p>
+        <p>@Html.ActionLink("Clientes »", "Index", "Cliente", new { area = "" }, new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Ofertas</h2>
+        <p>Para ver mais informações sobre ofertas clique no botão abaixo.</p>
+        <p>@Html.ActionLink("Ofertas »", "Index", "Oferta", new { area = "" }, new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Produtos</h2>
+        <p>Para ver mais informações sobre produtos clique no botão abaixo.</p>
+        <p>@Html.ActionLink("Produtos »", "Index", "Produto", new { area = "" }, new { @class = "btn btn-default" })</p>
+    </div>
+</div>

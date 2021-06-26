@@ -1,0 +1,40 @@
+﻿@model SistemaOfertas.Models.Status
+
+@{ ViewBag.Title = "Details"; }
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Status</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinalizaCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinalizaCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContabCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContabCliente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.StatusId }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

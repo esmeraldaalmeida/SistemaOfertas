@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SistemaOfertas.Models.Produto>
+
+@{ ViewBag.Title = "Produtos"; }
+
+<h2>Produtos</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoProduto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.DescricaoProduto)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Preco)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Tipo)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.IdProduto }) |
+        @Html.ActionLink("Detalhes", "Details", new { id = item.IdProduto }) |
+        @Html.ActionLink("Deletar", "Delete", new { id = item.IdProduto })
+    </td>
+</tr>}
+
+</table>

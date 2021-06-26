@@ -1,0 +1,40 @@
+﻿@model SistemaOfertas.Models.Produto
+
+@{ ViewBag.Title = "Details"; }
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoProduto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoProduto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdProduto }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>
